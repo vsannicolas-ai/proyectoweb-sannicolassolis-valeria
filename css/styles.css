@@ -6,14 +6,22 @@
     font-family: 'Arial', sans-serif;
 }
 
-header {
-    background: #fcfcfc;
-    color: #fffdfd;
+.header {
+    background: #fdfdfd; 
+    color: #232222;
     padding: 1rem;
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
+
+.header-inner {
+    display:flex;
+    align-items: center;
+    width: 100%;
+}
+
+
 
 /* Estilos para el contenedor del logo y el título */
 .logo {
@@ -25,7 +33,7 @@ header {
 .logo img {
   border-radius: 100px;
   width: 150px;
-  height: 170px;
+  height: 90px;
   }
   
 .header h1 {
@@ -34,11 +42,12 @@ header {
   
   /* BOTONES DE INICIO Y BARRA DE NAVEGACIÓN */
 
-.nav ul {
+.main-nav ul{
+    margin-left: auto;
     display: flex;
     list-style: none;
 }
-.nav ul li a {
+.main-nav ul li a {
     color: grey;
     text-decoration: none;
     margin-left: 2rem;
@@ -47,9 +56,9 @@ header {
   gap: 15px; /*Espacio entre las secciones del menú nav */
   }
   
-.nav-button {
-    background-color: #9AAF94;
-    color: #333333;
+.btn-dona {
+    background-color: #1e1f1d;
+    color: #2b2929;
   padding: 10px 20px;
   margin-left: 15px;
   border-radius: 10px;
@@ -63,3 +72,39 @@ header {
     background-color: #7F966F;
   transform: scale(1.05);
   }
+
+.footer {
+    width: 100%;
+    display: block;
+}
+
+.footer-social {
+    width: 100%;
+    background-color: #E8A0BF;
+    padding: 25px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #9AAF94;
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
