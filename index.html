@@ -15,9 +15,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- El meta dato del viewport es para que se adapte a cualquier pantalla -->
-    <meta name="author" content="Valeria San Nicolas Solis"
+    <meta name="author" content="Valeria San Nicolas Solis">
+    
+    <title> DEL NORTH CAPS </title>
 
-    <title>DEL NORTH CAPS</title>
     <!-- El título como voy a aparecer en la web -->
 
     <link rel="stylesheet" href="css/styles.css">
@@ -37,12 +38,10 @@
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#lanzamientos">Nuevos Lanzamientos</a></li>
-          <li><a href="#colecciones">Colecciones</a></li>
-          <li><a href="#northwest">Colección NORTHWEST</a></li>
+          <li><a href="#northwest">NORTHWEST</a></li>
           <li><a href="#buscados">Más Buscados</a></li>
-          <li><a href="#sociales">Redes Sociales</a></li>
 
-          <li><a class="btn-dona" href="#donar">Dona</a></li>
+          <li><a class="btn-dona" href="#checkout">CHECKOUT</a></li>
         </ul>
       </nav>
       <button id="menuToggle" class="menu-toggle">☰</button>
@@ -52,38 +51,69 @@
 <!-- AQUÍ INICIA EL MAIN   -->
   <main>
     <!-- HERO con video, si no quiero video, pendiente cambiarlo a otra cosa -->
-    <section class="hero video-hero">
-      <video class="hero-video" id="heroVideo" autoplay loop playsinline>
-        <source src="img/Video_pies_con_cora.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
+    <!-- <section class="hero video-hero"--> 
+      <!--<video class="hero-video" id="heroVideo" autoplay loop playsinline -->
+        <!--source src="img/Video_pies_con_cora.mp4" type="video/mp4" />-->
+      <!--/video>
+      <div class="hero-overlay"> NUESTROS DISEÑADORES </div> -->
 
 <!-- Estos son los botones queb están dentro de los videos -->
 
+<!-- CARRUSEL DE IMÁGENES / LANZAMIENTOS -->
+
       <div class="hero-content container">
         <div class="hero-actions">
-          <a class="btn primary" href="https://forms.gle/9bGxM41iZmSR8NVj6">Dona</a>
-          <a class="btn outline" href="#voluntariado">Sé parte</a>
+          <a class="btn primary" href="https://forms.gle/9bGxM41iZmSR8NVj6"> CONÓCENOS</a>
+          <a class="btn outline" href="#voluntariado">SÉ PARTE</a>
         </div>
 
 <!-- Estas tarjetas son para colocar estadísticas y la clase de stat es para colocar datos -->
 
+    </section> <!--Fin hero y cierra las estadísticas y todo-->
+
+    <!-- CARRUSEL DE IMÁGENES / LANZAMIENTOS / PRODUCTOS ETC -->
+    <section id="lanzamientos" class="carousel-section container">
+      <h2>Nuevos Lanzamientos</h2>
+
+
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="img/carrusel 1.png" alt="Consultorías TechIY">
+            <p class="carousel-caption">             MADE IN MEXICO            </p>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="img/carrusel 2.png" alt="Talleres TechIY">
+            <p class="carousel-caption">            MADE IN MEXICO           </p>
+          </div>
+
+        </div>
+
         <div class="stats-grid">
           <div class="stat">
-            <div class="stat-number">+200 mil ventas</div>
-            <div class="stat-label">Ventas a Nivel Nacional</div>
+            <div class="stat-number">+ 300 MIL</div>
+            <div class="stat-label"> VENTAS A NIVEL NACIONAL </div>
           </div>
           <div class="stat">
-            <div class="stat-number">+200.000</div>
-            <div class="stat-label">Clientes Satisfechos</div>
+            <div class="stat-number">+ 200 MIL</div>
+            <div class="stat-label"> CLIENTES SATISFECHOS </div>
           </div>
           <div class="stat">
-            <div class="stat-number">+300 mil</div>
-            <div class="stat-label">Visitas en Nuestra Página Web</div>
+            <div class="stat-number">+ 400 MIL</div>
+            <div class="stat-label">VISITAS EN NUESTRA PÁGINA WEB</div>
           </div>
         </div>
       </div>
-    </section> <!--Fin hero y cierra las estadísticas y todo-->
+
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Anterior">&#10094;</button>
+        <button class="carousel-btn next" id="carouselNext" aria-label="Siguiente">&#10095;</button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </section>
+    <!-- FIN CARRUSEL -->
+
 
     <!-- Aquí hay 3 tarjetas para destacar proyectos, ventas, productos, servicios, etc -->
 
@@ -103,10 +133,10 @@
           <div class="card-body">
             <h3> NORTHWEST </h3>
             <p> 
-                Destacar el talento de nuestro país es la clave para reflejar el arte,mientras que la cultura y la identidad son parte del éxito.
+        
+                Nuestra línea base, nuestros inicios y cada punto clave para lanzar este proyecto.
                 
-                Nuestra colección NORTHWEST refleja nuestra línea base, nuestros inicios y cada punto clave para lanzar este proyecto.
-                Porque sabemos que el misterio es lo que más intriga genera, lo que todo quieren conocer. 
+                Porque sabemos que el misterio es lo que genera más intriga, es lo que todos quieren conocer. 
 
             </p>
           </div>
@@ -114,17 +144,24 @@
         <article class="card">
           <div class="card-img" id="guajira"></div>
           <div class="card-body">
-            <h3> AQUI LA SIGUIENTE COLECCION </h3>
-            <p>Intervenciones comunitarias y proyectos culturales en las 
-              poblaciones indígenas y comunidades afrocolombianas.</p>
+            <h3> ONE BUCK </h3>
+            <p>
+
+                Todo comienza en algún punto. ONE BUCK representa el primer movimiento, el valor de lo simple y aquello que adquiere significado 
+                para quien sabe reconocerlo.
+            
+            </p>
           </div>
         </article>
         <article class="card">
           <div class="card-img" id="cordoba"></div>
           <div class="card-body">
-            <h3> AQUI LA SIGUIENTE COLECCION </h3>
-            <p>Escuelas y centros de aprendizaje fortalecidos para los niños y niñas </aside> de 
-              familias agricultoras.</p>
+            <h3> BOSTON '25 </h3>
+            <p>
+                Destacar el talento de nuestro país es la clave para reflejar el arte, mientras que la cultura y la identidad son parte del éxito.
+                Una pieza, un símbolo y una historia por descubrir.
+
+            </p>
           </div>
         </article>
       </div>
@@ -159,25 +196,14 @@
   <div class="footer-social">
     <div class="container social-icons">
 
-      <a href="https://www.facebook.com/" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-
-      <a href="https://www.instagram.com/" aria-label="Instagram">
+      <a href="https://www.instagram.com/valeasolis?igsi=ZzdrbGNkMjRteTF5&utm_source=qr" aria-label="Instagram">
         <i class="fa-brands fa-instagram"></i>
       </a>
 
-      <a href="https://www.youtube.com/" aria-label="YouTube">
-        <i class="fa-brands fa-youtube"></i>
+      <a href="www.tiktok.com/@valeasolis" aria-label="tiktok">
+        <i class="fa-brands fa-tiktok"></i>
       </a>
 
-      <a href="https://www.linkedin.com/" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-
-      <a href="https://x.com/" aria-label="X (Twitter)">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
 
     </div>
   </div>

@@ -7,8 +7,8 @@
 }
 
 .header {
-    background: #fdfdfd; 
-    color: #232222;
+    background: #181717; 
+    color: #ffffff;
     padding: 1rem;
     position: fixed;
     width: 100%;
@@ -18,10 +18,7 @@
 .header-inner {
     display:flex;
     align-items: center;
-    width: 100%;
-}
-
-
+    width: 100%; }
 
 /* Estilos para el contenedor del logo y el título */
 .logo {
@@ -31,9 +28,8 @@
   }
   
 .logo img {
-  border-radius: 100px;
-  width: 150px;
-  height: 90px;
+  width: 110px;
+  height: auto;
   }
   
 .header h1 {
@@ -42,13 +38,25 @@
   
   /* BOTONES DE INICIO Y BARRA DE NAVEGACIÓN */
 
-.main-nav ul{
+.menu-toggle { 
+    margin-left: 20px;
+}
+
+  .main-nav {
+
     margin-left: auto;
+}
+
+  .main-nav ul{
+    margin-left: 0;
     display: flex;
     list-style: none;
+    padding-left: 0;
+    gap: 15px;
 }
+
 .main-nav ul li a {
-    color: grey;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin-left: 2rem;
     display: flex;
@@ -86,23 +94,28 @@
 
 .btn.primary {
   background: linear-gradient(45deg, var(--orange), var(--orange-light));
-  color: #fff;
+  color: #070707;
+  background: #fdfdfd;
+  border: 2px solid #1e1f1d;
 }
 
 .btn.primary:hover {
+    background: #e0dede;
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(255, 107, 60, 0.3);
+  box-shadow: 0 8px 16px #1e1f1d;
 }
+/*sombra por debajo del botón */
 
 .btn.outline {
   background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #1e1f1d;
+  color: #050505;
 }
 
 .btn.outline:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #e0dede;
   transform: translateY(-2px);
+   box-shadow: 0 8px 16px #1e1f1d;
 }
 
 /* Stats */
@@ -116,34 +129,138 @@
 
 .stat {
   flex: 0 1 140px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(28, 27, 27, 0.15);
   border-radius: 10px;
   padding: 1rem 0.8rem;
   text-align: center;
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(23, 22, 22, 0.2);
 }
 
 .stat-number {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: #181717;
   margin-bottom: 0.3rem;
 }
 
 .stat-label {
   font-size: 0.8rem;
-  color: #f1f5f9;
+  color: #59595c;
   opacity: 0.95;
 }
+
+/* Carrusel de imágenes */
+.carousel-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1750px;
+  margin: 1.5rem auto 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 9px 30px #030303;
+  background-color: #1e1f1d0a;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.8rem;
+  background: #1e1f1d;
+  color: #ffffff;
+  font-weight: 1000;
+  text-align: center;
+  line-height: 1.7;
+
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(224, 219, 219, 0.8);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #ffffff;
+  color: #1e1f1d;
+}
+
+.carousel-btn.prev {
+  left: 12px;
+}
+
+.carousel-btn.next {
+  right: 12px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.8rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #E8A0BF;
+}
+
+
 
 /* Projects */
 .projects {
   padding:3rem 0;
+   text-align: center;
+  line-height: 2.0;
 }
 
 .lead {
   color:var(--muted);
+  text-align: center;
+  line-height: 2.0;
 }
 
 .project-cards {
@@ -154,7 +271,7 @@
 }
 
 .card {
-  background:#fff;
+  background: #333;
   border-radius:12px;
   box-shadow:0 6px 18px rgba(0,0,0,0.06);
   overflow:hidden;
@@ -166,7 +283,7 @@
 }
 
 .card-img {
-  height:170px;
+  height:200px;
   background:linear-gradient(135deg,var(--violet-light),var(--blue-light));
   display:flex;
   align-items:center;
@@ -181,11 +298,16 @@
 
 .card-body h3 {
   margin:0 0 0.4rem;
+  color: white;
+  text-align: center;
+  line-height: 2.0;
 }
 
 .card-body p {
-  color:var(--muted);
+  color: white;
   margin:0;
+  text-align: justify;
+  line-height: 1.7;
 }
 
 #antioquia-caucasia {
@@ -195,13 +317,13 @@
 }
 
 #guajira {
-  background-image: url("../img/child.jpg");
+  background-image: url("../img/tarjeta2.png");
   background-size: cover;
   background-position: center;
 }
 
 #cordoba {
-  background-image: url("../img/img2.jpg");
+  background-image: url("../img/tarjeta3.png");
   background-size: cover;
   background-position: center;
 }
@@ -210,8 +332,11 @@
 .newsletter {
   padding:2rem 0;
   background:linear-gradient(90deg, var(--violet-light) 0%, var(--blue-light) 100%);
-  color:#fff;
+  color:#010101;
+  text-align: justify;
+  line-height: 2.0;
 }
+
 
 .newsletter-inner {
   display:flex;
@@ -244,7 +369,7 @@
 
 .footer-social {
     width: 100%;
-    background-color: #E8A0BF;
+    background-color: #191818;
     padding: 25px 0;
 }
 
@@ -256,13 +381,13 @@
 }
 
 .social-icons a {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 24px;
     text-decoration: none;
 }
 
 .social-icons a:hover {
-    color: #9AAF94;
+    color: #ffffff;
 }
 
 .footer-bottom {
@@ -271,4 +396,8 @@
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+body {
+    background-color:#1e1f1d0e;
 }
